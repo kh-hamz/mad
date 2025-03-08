@@ -6,18 +6,24 @@ function App() {
     <>
         <div className='navbar'>
           <div className='nav-inner'>
-            <div className='logo-bar'>
-              <img src={logo} alt="Logo" />
-              <h5>GeMorph</h5>              
+            <div className='left-nav'>
+              <div className='logo-bar'>
+                <img src={logo} alt="Logo" />
+                <p>GeMorph</p>   
+              </div>
             </div>
-            <div className='nav-links'>
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Contact</a>
+            
+            <div className='right-nav'>
+              <div className='nav-links'>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+              </div>
+              <button className='login-button'>
+                Login
+              </button>
             </div>
-            <button className='login-button'>
-              Login
-            </button>
+
           </div>
         </div>
     </>
