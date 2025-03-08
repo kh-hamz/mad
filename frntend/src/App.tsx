@@ -19,7 +19,7 @@ function App() {
                 <a href="#">Services</a>
                 <a href="#">Contact</a>
               </div>
-              <button className='login-button'>
+              <button className='login-btn'>
                 Login
               </button>
             </div>
