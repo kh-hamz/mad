@@ -1,5 +1,6 @@
 import './App.css'
-import logo from './assets/react.svg' 
+import logo from './assets/react.svg'
+const vite = '/vite.svg'
 
 function App() {
   return (
@@ -23,7 +24,20 @@ function App() {
                 Login
               </button>
             </div>
-
+ 
+          </div>
+        </div>
+        <div className='main'>
+          <div className='main-inner'>
+            <div className='img-container'>
+              <div className='imgae'>
+                <img src={vite} alt="Logo" />
+              </div>              
+            </div>
+            <div className='descript'></div>
+            <div className='boxes'></div>
+            <div className='boxes-2'></div>
+            <div className='create'></div>
           </div>
         </div>
     </>
