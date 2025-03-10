@@ -1,10 +1,8 @@
 import React from "react";
 import "./ImageFeatureBlock.css";
-
-// Import images
-import dnaSequencing from "./assets/dna_sequencing.jpg";
-import dnaToFace from "./assets/dna_to_face.jpg";
-import ancestryAnalysis from "./assets/ancestry_analysis.jpg";
+import dnaSequencing from "./assets/science.png";
+import dnaToFace from "./assets/science.png";
+import ancestryAnalysis from "./assets/science.png";
 
 interface ImageFeature {
   imgSrc: string;
@@ -23,7 +21,7 @@ const ImageFeatureBlock: React.FC = () => {
       {features.map((feature, index) => (
         <div className="image-feature-card" key={index}>
           <img src={feature.imgSrc} alt={feature.title} className="feature-image" />
-          <h3 className="feature-title">{feature.title}</h3>
+          <h3 className="feature-image-title">{feature.title}</h3>
         </div>
       ))}
     </div>

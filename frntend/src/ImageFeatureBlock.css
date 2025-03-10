@@ -7,12 +7,12 @@
   
   .image-feature-card {
     flex: 1;
-    text-align: center;
-    background: white;
+    /* text-align: center; */
+    /* background: white; */
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* transition: transform 0.3s ease-in-out; */
   }
   
   .image-feature-card:hover {
@@ -26,9 +26,10 @@
     border-radius: 10px;
   }
   
-  .feature-title {
-    font-size: 16px;
+  .feature-image-title {
+    font-family: Arial, sans-serif;
     font-weight: bold;
-    margin-top: 10px;
+    font-size: 17px;
+    margin-top: 15px;
   }
   

@@ -1,5 +1,6 @@
 import './App.css'
 import FeatureBlock from "./FeatureBlocks";
+import ImageFeatureBlock from "./ImageFeatureBlock";
 import logo from './assets/react.svg'
 const vite = '/vite.svg'
 
@@ -42,7 +43,7 @@ function App() {
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ad sed voluptate consectetur, quam tempore nesciunt alias laudantium consequatur labore quis ex soluta rerum consequuntur numquam saepe laboriosam reiciendis enim.</p>
             </div>
             <FeatureBlock />
-            <div className='boxes-2'></div>
+            <ImageFeatureBlock />
             <div className='create'></div>
           </div>
         </div>
