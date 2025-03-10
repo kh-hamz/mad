@@ -1,34 +1,15 @@
 import './App.css'
-import FeatureBlock from "./FeatureBlocks";
-import ImageFeatureBlock from "./ImageFeatureBlock";
-import logo from './assets/react.svg'
+import Navbar from './components/Navbar/Navbar';
+import FeatureBlock from "./components/LandingPage/FeatureBlocks";
+import ImageFeatureBlock from "./components/LandingPage/ImageFeatureBlock";
+// import logo from './assets/react.svg'
 const vite = '/vite.svg'
 
 function App() {
   return (
     <>
-        <div className='navbar'>
-          <div className='nav-inner'>
-            <div className='left-nav'>
-              <div className='logo-bar'>
-                <img src={logo} alt="Logo" />
-                <p>GeMorph</p>   
-              </div>
-            </div>
-            
-            <div className='right-nav'>
-              <div className='nav-links'>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-              </div>
-              <button className='login-btn'>
-                Login
-              </button>
-            </div>
- 
-          </div>
-        </div>
+    <Navbar />
+        {/* Main starts here */}
         <div className='main'>
           <div className='main-inner'>
             <div className='img-container'>
