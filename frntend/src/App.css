@@ -102,9 +102,10 @@ p {
 .main-inner {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 10rem 0 10rem;
+  padding: 2rem 12rem 0 12rem;
   height: fit-content;
 }
 
@@ -114,6 +115,13 @@ p {
 }
 
 .imgae {
-  padding: 15px;
+  padding: 20px;
   height: 100%;
 }
+
+.descript {
+  position: relative;
+  width: 100%;
+}
+
+
