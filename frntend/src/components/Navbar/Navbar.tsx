@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import logo from "../../assets/react.svg"; // Adjust path based on your structure
+import logo from "../../assets/react.svg"; 
 
 const Navbar: React.FC = () => {
   return (

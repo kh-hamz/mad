@@ -1,6 +1,6 @@
 import React from "react";
 import "./FeatureBlock.css";
-import LockIcon from "./assets/lock.svg";
+import LockIcon from "../../assets/lock.svg";
 
 
 

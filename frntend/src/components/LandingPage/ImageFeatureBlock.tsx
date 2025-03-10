@@ -1,8 +1,9 @@
 import React from "react";
 import "./ImageFeatureBlock.css";
-import dnaSequencing from "./assets/science.png";
-import dnaToFace from "./assets/science.png";
-import ancestryAnalysis from "./assets/science.png";
+import dnaSequencing from "../../assets/science.png";
+import dnaToFace from "../../assets/science.png";
+import ancestryAnalysis from "../../assets/science.png";
+
 
 interface ImageFeature {
   imgSrc: string;
