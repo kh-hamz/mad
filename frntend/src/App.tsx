@@ -2,7 +2,6 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import FeatureBlock from "./components/LandingPage/FeatureBlocks";
 import ImageFeatureBlock from "./components/LandingPage/ImageFeatureBlock";
-// import logo from './assets/react.svg'
 const vite = "/vite.svg";
 
 function App() {
@@ -18,7 +17,9 @@ function App() {
             </div>
           </div>
           <div className="descript">
-            <h3>Why GeMorph?</h3>
+            <h1>Why GeMorph?</h1>
+          </div>
+          <div className="text-container">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ad
               sed voluptate consectetur, quam tempore nesciunt alias laudantium
@@ -28,7 +29,12 @@ function App() {
           </div>
           <FeatureBlock />
           <ImageFeatureBlock />
-          <div className="create"></div>
+          <div className="create">
+            <h1>Ready to get started?</h1>
+          </div>
+          <div className="btn-container">
+            <div className="create-acc-btn">Create an account</div>
+          </div>
         </div>
       </div>
     </>
