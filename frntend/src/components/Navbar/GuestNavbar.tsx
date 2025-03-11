@@ -1,8 +1,11 @@
 import React from "react";
-import "./Navbar.css";
-import logo from "../../assets/react.svg"; 
+import { useAuth } from "../../context/AuthContext";
+import "./GuestNavbar.css";
+import logo from "../../assets/react.svg";
 
-const Navbar: React.FC = () => {
+const GuestNavbar: React.FC = () => {
+  const { isAuthenticated, login, logout } = useAuth();
+
   return (
     <div className="navbar">
       <div className="nav-inner">
@@ -19,11 +22,20 @@ const Navbar: React.FC = () => {
             <a href="#">Services</a>
             <a href="#">Contact</a>
           </div>
-          <button className="login-btn">Login</button>
+
+          {isAuthenticated ? (
+            <button className="logout-btn" onClick={logout}>
+              Logout
+            </button>
+          ) : (
+            <button className="login-btn" onClick={login}>
+              Login
+            </button>
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-export default Navbar;
+export default GuestNavbar;

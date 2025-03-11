@@ -12,7 +12,7 @@
   }
   
   .image-feature-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-1px);
   }
   
   .feature-image {
