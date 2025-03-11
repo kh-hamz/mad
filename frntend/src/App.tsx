@@ -7,10 +7,10 @@ import Home from "./pages/Home";
 // import CaseSubmission from "./pages/CaseSubmission";
 
 function App() {
-  const { isAuthenticated } = useAuth(); // Get auth state
+  const { isAuthenticated } = useAuth(); 
   return (
     <Router>
-      {isAuthenticated ? <AuthNavbar /> : <GuestNavbar />}
+      {isAuthenticated ?<GuestNavbar /> : <AuthNavbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/case-submission" element={<CaseSubmission />} />  */}

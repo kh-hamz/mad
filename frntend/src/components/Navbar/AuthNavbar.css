@@ -1,0 +1,129 @@
+.navbar {
+  position: relative;
+  background-color: #ffffff;
+  height: 4rem;
+  width: 100%;
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  height: 4rem;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-bar img {
+  width: 30px;
+  margin-right: 8px;
+}
+
+.logo-bar p {
+  font-size: large;
+  font-family: system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.icon-wrapper {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f2f5;
+  border-radius: 15px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.icon-wrapper:hover {
+  background-color: #e0e3e7; 
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.dropdown-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:  45px;
+  height: 45px;
+  background-color: #c4a484;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #c4a484;
+  border-radius: 50%;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content button:hover {
+  background: #f0f0f0;
+}
