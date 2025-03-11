@@ -35,18 +35,18 @@ const AuthNavbar: React.FC = () => {
             <div className="icon-wrapper">
               <img src={bellIcon} alt="Notifications" className="nav-icon" />
             </div>
-            {/* Dropdown Button */}
-            <div
-              className="dropdown-menu"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            >
-              <div className="profile-circle"></div>
-              {isDropdownOpen && (
-                <div className="dropdown-content">
-                  <button onClick={logout}>Logout</button>
-                </div>
-              )}
-            </div>
+          </div>
+          {/* Dropdown Button */}
+          <div
+            className="dropdown-menu"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          >
+            <div className="profile-circle"></div>
+            {isDropdownOpen && (
+              <div className="dropdown-content">
+                <button onClick={logout}>Logout</button>
+              </div>
+            )}
           </div>
         </div>
       </div>

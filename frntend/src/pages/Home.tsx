@@ -1,15 +1,15 @@
 import React from "react";
+import './Home.css'
 import FeatureBlock from "../components/LandingPage/FeatureBlock";
 import ImageFeatureBlock from "../components/LandingPage/ImageFeatureBlock";
 const viteLogo = "/vite.svg";
 
 const Home: React.FC = () => {
   return (
-    
     <div className="main">
       <div className="main-inner">
         <div className="img-container">
-          <div className="image">
+          <div className="imgae">
             <img src={viteLogo} alt="Logo" />
           </div>
         </div>
