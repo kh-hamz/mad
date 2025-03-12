@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./CaseTypeSelector.css"; // Import corresponding styles
+import "./CaseTypeSelector.css";
 
 interface CaseTypeSelectorProps {
-  onSelect: (caseType: string) => void; // Function to pass selected case type to parent
+  onSelect: (caseType: string) => void;
 }
 
 const caseTypes = [
@@ -14,11 +14,17 @@ const caseTypes = [
 ];
 
 const CaseTypeSelector: React.FC<CaseTypeSelectorProps> = ({ onSelect }) => {
-  const [selectedType, setSelectedType] = useState<string>("");
+  const [selectedType, setSelectedType] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const handleSelection = (caseType: string) => {
-    setSelectedType(caseType);
-    onSelect(caseType); // Pass selected case type to parent component
+    setSelectedType((prevType) => (prevType === caseType ? null : caseType));
+    onSelect(caseType);
+  };
+
+  const handleSubmit = () => {
+    if (!selectedType) return; 
+    setIsModalOpen(true); 
   };
 
   return (
@@ -31,31 +37,46 @@ const CaseTypeSelector: React.FC<CaseTypeSelectorProps> = ({ onSelect }) => {
           {caseTypes.map((type) => (
             <button
               key={type}
-              className={`case-option ${
-                selectedType === type ? "selected" : ""
-              }`}
+              className={`case-option ${selectedType === type ? "selected" : ""}`}
               onClick={() => handleSelection(type)}
             >
               <span className="case-text">{type}</span>
-              <span
-                className={`radio-circle ${
-                  selectedType === type ? "checked" : ""
-                }`}
-              ></span>
+              <span className={`radio-circle ${selectedType === type ? "checked" : ""}`}></span>
             </button>
           ))}
         </div>
       </div>
-        {/* Case Description Section */}
-        <div className="case-description-container">
-          <h2 className="case-description-title">Case description</h2>
-          <textarea
-            className="case-description-input"
-            placeholder="Write your case details here..."
-          ></textarea>
-          <button className="next-button">Next</button>
-        </div>
 
+      {/* Case Description Section */}
+      <div className="case-description-container">
+        <h2 className="case-description-title">Case description</h2>
+        <textarea
+          className="case-description-input"
+          placeholder="Write your case details here..."
+        ></textarea>
+        
+        {/* Submit Button */}
+        <button
+          className={`next-button ${selectedType ? "" : "disabled"}`}
+          onClick={handleSubmit}
+          disabled={!selectedType}
+        >
+          Submit
+        </button>
+      </div>
+
+      {/* Custom Pop-up Modal */}
+      {isModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2>Case Submitted</h2>
+            <p>Your case has been successfully submitted.</p>
+            <button className="modal-close-button" onClick={() => setIsModalOpen(false)}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
