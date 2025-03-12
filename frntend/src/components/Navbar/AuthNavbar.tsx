@@ -22,7 +22,7 @@ const AuthNavbar: React.FC = () => {
 
         <div className="right-nav">
           <div className="nav-links">
-            <Link to="/Home">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="/case-submission">Cases</Link>
             <Link to="#">Reports</Link>
             <Link to="#">Contact</Link>

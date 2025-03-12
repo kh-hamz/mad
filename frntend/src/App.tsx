@@ -12,7 +12,7 @@ function App() {
     <Router>
       {isAuthenticated ?<GuestNavbar /> : <AuthNavbar />}
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/case-submission" element={<CaseSubmission />} /> 
       </Routes>
     </Router>

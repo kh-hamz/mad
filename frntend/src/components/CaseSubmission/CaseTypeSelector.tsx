@@ -16,15 +16,41 @@ const caseTypes = [
 const CaseTypeSelector: React.FC<CaseTypeSelectorProps> = ({ onSelect }) => {
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSelection = (caseType: string) => {
     setSelectedType((prevType) => (prevType === caseType ? null : caseType));
     onSelect(caseType);
   };
 
+  const submitCase = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch("http://localhost:5000/api/submit-case", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ caseType: selectedType }),
+      });
+
+      if (!response.ok) throw new Error("Failed to submit case");
+
+      const data = await response.json();
+      console.log("Response:", data);
+
+      // Show the success modal
+      setIsModalOpen(true);
+    } catch (error) {
+      console.error("Error submitting case:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleSubmit = () => {
-    if (!selectedType) return; 
-    setIsModalOpen(true); 
+    if (!selectedType || loading) return; 
+    submitCase();
   };
 
   return (
@@ -57,11 +83,11 @@ const CaseTypeSelector: React.FC<CaseTypeSelectorProps> = ({ onSelect }) => {
         
         {/* Submit Button */}
         <button
-          className={`next-button ${selectedType ? "" : "disabled"}`}
+          className={`next-button ${selectedType && !loading ? "" : "disabled"}`}
           onClick={handleSubmit}
-          disabled={!selectedType}
+          disabled={!selectedType || loading}
         >
-          Submit
+          {loading ? "Submitting..." : "Submit"}
         </button>
       </div>
 
