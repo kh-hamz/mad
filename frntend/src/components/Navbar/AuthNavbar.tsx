@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import "./AuthNavbar.css";
 import logo from "../../assets/react.svg";
@@ -21,10 +22,10 @@ const AuthNavbar: React.FC = () => {
 
         <div className="right-nav">
           <div className="nav-links">
-            <a href="/dashboard">Home</a>
-            <a href="/cases">Cases</a>
-            <a href="/reports">Reports</a>
-            <a href="/contact">Contact</a>
+            <Link to="/Home">Home</Link>
+            <Link to="/case-submission">Cases</Link>
+            <Link to="#">Reports</Link>
+            <Link to="#">Contact</Link>
           </div>
 
           {/* Icons Section */}

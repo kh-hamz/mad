@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import "./GuestNavbar.css";
 import logo from "../../assets/react.svg";
@@ -18,9 +19,9 @@ const GuestNavbar: React.FC = () => {
 
         <div className="right-nav">
           <div className="nav-links">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <Link to="/case-submission">About</Link>
+            <Link to="#">Services</Link>
+            <Link to="#">Contact</Link>
           </div>
 
           {isAuthenticated ? (
