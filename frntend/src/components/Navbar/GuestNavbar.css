@@ -3,6 +3,10 @@
   background-color: #ffffff;
   height: 4rem;
   width: 100%;
+
+  /* In case of hardcode
+  position: absolute;
+  z-index: 2; */
 }
 
 .nav-inner {
