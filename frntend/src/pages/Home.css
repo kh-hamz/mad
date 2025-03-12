@@ -38,10 +38,18 @@
   padding: 15px;
 }
 
+.descript h1 {
+  font-family: sans-serif;
+}
+
 .text-container {
   position: relative;
   display: flex;
-  padding: 0 15px;
+  padding: 12px 20px;
+}
+
+.text-container p {
+  font-family: sans-serif;
 }
 
 .create {
@@ -52,8 +60,9 @@
   padding: 15px;
 }
 
-.create h1 {
+.create h2 {
   text-align: left;
+  font-family: sans-serif;
 }
 
 .btn-container {

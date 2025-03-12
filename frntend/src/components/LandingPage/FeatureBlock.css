@@ -13,7 +13,7 @@
   padding: 20px;
   text-align: left;
   transition: 0.2s ease-in-out;
-  /* min-height: 250px;  */
+  min-height: 200px; 
 }
 
 .feature-card:hover {
@@ -29,11 +29,13 @@
 .feature-title {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
 }
 
 .feature-description {
   font-size: 14px;
   font-weight: 600;
   color: #3b70a6;
+  margin-top: 15px;
 }

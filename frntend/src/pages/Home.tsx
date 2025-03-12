@@ -1,5 +1,5 @@
 import React from "react";
-import './Home.css'
+import "./Home.css";
 import FeatureBlock from "../components/LandingPage/FeatureBlock";
 import ImageFeatureBlock from "../components/LandingPage/ImageFeatureBlock";
 const viteLogo = "/vite.svg";
@@ -21,13 +21,23 @@ const Home: React.FC = () => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus ad
             sed voluptate consectetur, quam tempore nesciunt alias laudantium
             consequatur labore quis ex soluta rerum consequuntur numquam saepe
-            laboriosam reiciendis enim.
+            laboriosam reiciendis enim Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Magnam ut cupiditate ex hic quis saepe officia
+            dolor, harum voluptatibus quasi asperiores ea minima adipisci,
+            molestiae non quas esse perspiciatis voluptatum. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. At debitis cum aspernatur
+            neque necessitatibus cumque numquam temporibus! Architecto, facere
+            ducimus tenetur unde tempora dolor molestias veritatis saepe
+            repudiandae consectetur cupiditate. Magni fugit, id dolorem illum
+            saepe autem quidem quisquam veritatis dolorum alias ipsam est
+            architecto veniam! Odit debitis veniam vero sequi nostrum omnis
+            repellendus vitae possimus? Amet esse earum accusantium?
           </p>
         </div>
         <FeatureBlock />
         <ImageFeatureBlock />
         <div className="create">
-          <h1>Ready to get started?</h1>
+          <h2>Ready to get started?</h2>
         </div>
         <div className="btn-container">
           <div className="create-acc-btn">Create an account</div>
