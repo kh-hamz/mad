@@ -1,6 +1,8 @@
 import React from "react";
 import "./FeatureBlock.css";
 import LockIcon from "../../assets/lock.svg";
+import ShieldIcon from "../../assets/shield.svg"
+import MenuIcon from "../../assets/menu.svg"
 
 
 
@@ -21,13 +23,13 @@ const FeatureBlock: React.FC = () => {
         "Data is encrypted at rest and in transit, and only decrypted by the recipient.",
     },
     {
-      icon: <img src={LockIcon} alt="Lock Icon" width={24} height={24} />,
+      icon: <img src={ShieldIcon} alt="Lock Icon" width={24} height={24} />,
       title: "Privacy-focused",
       description:
         "We don’t track or store any personal information about our users.",
     },
     {
-      icon: <img src={LockIcon} alt="Lock Icon" width={24} height={24} />,
+      icon: <img src={MenuIcon} alt="Lock Icon" width={24} height={24} />,
       title: "Compliance checks",
       description:
         "Our platform checks submitted evidence to ensure it meets legal requirements.",
