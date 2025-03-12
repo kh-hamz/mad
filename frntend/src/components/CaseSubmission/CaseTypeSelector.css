@@ -1,60 +1,93 @@
+.case-container {
+  width: 100%;
+}
+
+.case-des {
+  padding: 20px 20px 10px 20px;
+}
+
+.case-des h2 {
+  font-family: sans-serif;
+}
 .case-type-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background: #ffffff;
-    padding: 16px;
-    border-radius: 8px;
-  }
-  
-  .case-option {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  .case-option input {
-    display: none; /* Hide default radio */
-  }
-  
-  .case-option.selected {
-    border-color: #007bff;
-    background: #e6f0ff;
-  }
-  
-  .case-option:hover {
-    background: #f0f0f0;
-  }
-  
-  /* Existing case-type styles remain unchanged */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.case-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  text-align: left;
+  height: 3.5rem;
+  font-weight: 700;
+}
+
+.case-text {
+  flex: 1;
+  text-align: left;
+}
+
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease;
+}
+
+.radio-circle::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.case-option.selected {
+  border-color: #007bff;
+  background: #e6f0ff;
+}
+
+.case-option.selected .radio-circle {
+  border-color: #007bff;
+}
+
+.case-option.selected .radio-circle::after {
+  background-color: #007bff;
+}
 
 .case-description-container {
   width: 100%;
-  max-width: 960px;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
   margin-top: 20px;
 }
 
 .case-description-title {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
 }
 
 .case-description-input {
   width: 100%;
-  height: 150px;
+  height: 250px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 10px;
   font-size: 16px;
   resize: vertical;
@@ -62,13 +95,13 @@
 
 .next-button {
   display: block;
-  margin-left: auto; /* Pushes it to the right */
-  margin-top: 15px;
-  padding: 10px 20px;
+  margin-left: auto;
+  margin-top: 25px;
+  padding: 15px 30px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 16px;
   font-size: 16px;
   cursor: pointer;
 }

@@ -1,12 +1,12 @@
 import React from "react";
-import "./ProgressBar.css"; // Import CSS for styling
+import "./ProgressBar.css";
 
 interface ProgressBarProps {
-  step: number; // Step should be between 1 to 5
+  step: number;
 }
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ step }) => {
-  const progressPercentage = (step / 5) * 100; // Calculate progress
+  const progressPercentage = (step / 5) * 100; 
 
   return (
     <div className="progress-container">

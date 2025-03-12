@@ -23,27 +23,39 @@ const CaseTypeSelector: React.FC<CaseTypeSelectorProps> = ({ onSelect }) => {
 
   return (
     <>
-      <div className="case-type-container">
-        {caseTypes.map((type) => (
-          <label key={type} className={`case-option ${selectedType === type ? "selected" : ""}`}>
-            <input
-              type="radio"
-              name="caseType"
-              value={type}
-              checked={selectedType === type}
-              onChange={() => handleSelection(type)}
-            />
-            {type}
-          </label>
-        ))}
+      <div className="case-container">
+        <div className="case-des">
+          <h2>Case Type</h2>
+        </div>
+        <div className="case-type-container">
+          {caseTypes.map((type) => (
+            <button
+              key={type}
+              className={`case-option ${
+                selectedType === type ? "selected" : ""
+              }`}
+              onClick={() => handleSelection(type)}
+            >
+              <span className="case-text">{type}</span>
+              <span
+                className={`radio-circle ${
+                  selectedType === type ? "checked" : ""
+                }`}
+              ></span>
+            </button>
+          ))}
+        </div>
       </div>
+        {/* Case Description Section */}
+        <div className="case-description-container">
+          <h2 className="case-description-title">Case description</h2>
+          <textarea
+            className="case-description-input"
+            placeholder="Write your case details here..."
+          ></textarea>
+          <button className="next-button">Next</button>
+        </div>
 
-      {/* Case Description Section */}
-      <div className="case-description-container">
-        <h2 className="case-description-title">Case description</h2>
-        <textarea className="case-description-input" placeholder="Write your case details here..."></textarea>
-        <button className="next-button">Next</button>
-      </div>
     </>
   );
 };
