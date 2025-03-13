@@ -6,6 +6,7 @@ import React from "react";
 import "./Home.css";
 import FeatureBlock from "../components/LandingPage/FeatureBlock";
 import ImageFeatureBlock from "../components/LandingPage/ImageFeatureBlock";
+import CoverImage from "../assets/coverImg.jpg"
 // import GuestNavbar from "../components/Navbar/GuestNavbar";
 const viteLogo = "/vite.svg";
 
@@ -17,7 +18,8 @@ const Home: React.FC = () => {
         <div className="main-inner">
           <div className="img-container">
             <div className="imgae">
-              <img src={viteLogo} alt="Logo" />
+              <img src={CoverImage} alt="Logo"></img> 
+              <div className="imgText">Giving a Face to Every DNA</div>
             </div>
           </div>
           <div className="descript">
